@@ -1,0 +1,12 @@
+set hintkeys='asdfghjklweiovbn'
+imap jk <Esc>
+
+map -builtin <C-e> 10<C-e>
+map -builtin <C-y> 10<C-y>
+
+:hi Hint font-family: Inconsolata; font-size: 13px; font-weight: bold; color: white; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 1px 0px 1px; 
+nmap gq :taba 1 0<cr>
+nmap gw :taba 2 0<cr>
+nmap ge :taba 3 0<cr>
+
+set defsearch=duckduckgo
