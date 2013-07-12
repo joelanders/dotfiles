@@ -1,0 +1,11 @@
+keycode 64 = Alt_L
+keycode 108 = Alt_R
+keycode 133 = Meta_L
+
+clear Mod4
+
+clear Mod1
+add Mod1 = Meta_L
+
+clear Mod3
+add Mod3 = Alt_L Alt_R
