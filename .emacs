@@ -30,6 +30,7 @@
 ;(evil-mode 1)
 
 (ido-mode 1)
+(winner-mode 1)
 
 (global-set-key (kbd "C-o") 'other-window)
 (define-key Buffer-menu-mode-map (kbd "C-o") 'other-window)
