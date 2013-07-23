@@ -1,21 +1,4 @@
-stty pass8 && bindkey -mv 2>/dev/null
-bindkey -v
-
-function precmd {
-    VIMODE=$'%{\e[0;32m%}[i]%{\e[0m%}'
-}
-
-function zle-keymap-select {
-    NCOLOR=$'%{\e[1;33m%}'
-    ICOLOR=$'%{\e[0;32m%}'
-    ENDCOL=$'%{\e[0m%}'
-    VIMODE="${${KEYMAP/vicmd/${NCOLOR}[n]${ENDCOL}}/(main|viins)/${ICOLOR}[i]${ENDCOL}}"
-    zle reset-prompt
-}
-
-zle -N zle-keymap-select
-
-setopt prompt_subst
+stty pass8 2>/dev/null
 
 PROMPT=$'%{\e[0;36m%}\\
 l@rmbp \\
@@ -23,18 +6,12 @@ l@rmbp \\
 %{\e[0;34m%}\\
 ${PWD/#$HOME/~} \\
 %{\e[0m%}\\
-${VIMODE} \\
 %{\e[0;35m%}\\
 $ \\
 %{\e[0m%}'
 
 autoload -U select-word-style
 select-word-style bash
-
-bindkey -M viins '^w' backward-kill-word
-bindkey -M viins '^h' backward-delete-char
-bindkey -M viins '^?' backward-delete-char
-bindkey -M viins 'jk' vi-cmd-mode
 
 bindkey -s ',gs' '^qgit status\n'
 bindkey -s ',gb' '^qgit branch\n'
