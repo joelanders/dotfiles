@@ -1,11 +1,21 @@
 stty pass8 2>/dev/null
 
+setopt prompt_subst
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+zstyle ':vcs_info:*' formats '%F{5}[%F{2}%b%F{5}]%f '
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+precmd () { vcs_info }
+
 PROMPT=$'%{\e[0;36m%}\\
 l@rmbp \\
 %{\e[0m%}\\
 %{\e[0;34m%}\\
 ${PWD/#$HOME/~} \\
 %{\e[0m%}\\
+${vcs_info_msg_0_}\\
 %{\e[0;35m%}\\
 $ \\
 %{\e[0m%}'
