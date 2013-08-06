@@ -37,8 +37,8 @@
 
 (global-set-key (kbd "C-0") 'other-frame)
 
-(global-set-key (kbd "C-M-n") (lambda () (interactive) (next-line 10)))
-(global-set-key (kbd "C-M-p") (lambda () (interactive) (previous-line 10)))
+(global-set-key (kbd "M-n") (lambda () (interactive) (next-line 10)))
+(global-set-key (kbd "M-p") (lambda () (interactive) (previous-line 10)))
 
 (global-set-key (kbd "M-w") (lambda () (interactive) (scroll-up 10)))
 ;(global-set-key (kbd "C-M-w") (lambda () (interactive) (scroll-up 20)))
