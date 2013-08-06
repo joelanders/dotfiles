@@ -4,6 +4,8 @@ html=.haml
 css=.sass,.scss
 --type-add
 js=.coffee
+--type-add
+ruby=.yml
 
 --color-filename=red
 --color-match=yellow
