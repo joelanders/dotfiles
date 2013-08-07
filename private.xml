@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Make End button Alt</name>
+    <identifier>private.end_to_alt</identifier>
+    <autogen>__KeyToKey__ KeyCode::END, KeyCode::OPTION_L</autogen>
+  </item>
+  <item>
+    <name>Make End button Command</name>
+    <identifier>private.end_to_cmd</identifier>
+    <autogen>__KeyToKey__ KeyCode::END, KeyCode::COMMAND_L</autogen>
+  </item>
+
+  <item>
+    <name>Make Application Command</name>
+    <identifier>private.app_to_cmd</identifier>
+    <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::COMMAND_L</autogen>
+  </item>
+  <item>
+    <name>Make Application Control</name>
+    <identifier>private.app_to_ctrl</identifier>
+    <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::CONTROL_L</autogen>
+  </item>
+
+  <item>
+    <name>Make Enter Command</name>
+    <identifier>private.enter_to_cmd</identifier>
+    <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::COMMAND_L</autogen>
+  </item>
+
+</root>
