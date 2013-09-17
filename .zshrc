@@ -32,6 +32,9 @@ bindkey -s '\ej1' 'jkk\n'
 
 #alias ls='ls -F --color=auto'
 alias ll='ls -ahl'
+#different mechanisms to do basically the same thing
+alias lsh="ls -a | egrep '^\.'"
+lsd() {for dirs in */; do echo $dirs; done}
 
 export CLICOLOR=1
 export GREP_OPTIONS="--color"
@@ -73,7 +76,7 @@ alias ss='cd ~/code/satisfaction'
 alias pack='ack --pager="less -r"'
 alias t='tree'
 alias v='vim'
-alias p='ps aux'
+alias p='ps aux | grep '
 alias j='jobs'
 alias f='fg'
 alias e='emacsclient -n'
@@ -83,3 +86,4 @@ alias ber='bundle exec rake'
 alias be='bundle exec'
 
 source "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash"
+export SATISFACTION_TOOLS=/Users/joelanders/code/tools
