@@ -17,6 +17,9 @@
 ;(helm-mode 1)
 (projectile-global-mode)
 
+(setq backup-inhibited t)
+(setq auto-save-mode nil)
+
 ;(add-to-list 'load-path "~/.emacs.d/helm")
 ;(require 'helm-config)
 
@@ -32,10 +35,14 @@
 (ido-mode 1)
 (winner-mode 1)
 
+(set-default 'truncate-lines nil)
+(setq truncate-partial-width-windows nil)
+
 (global-set-key (kbd "C-o") 'other-window)
 (define-key Buffer-menu-mode-map (kbd "C-o") 'other-window)
 
 (global-set-key (kbd "C-0") 'other-frame)
+(global-set-key (kbd "M-o") 'other-frame)
 
 (global-set-key (kbd "M-n") (lambda () (interactive) (next-line 10)))
 (global-set-key (kbd "M-p") (lambda () (interactive) (previous-line 10)))
@@ -59,6 +66,7 @@
 (global-set-key (kbd "C-.") 'undo-tree-redo)
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
+(define-key isearch-mode-map (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-/") 'help-command)
 
 (custom-set-variables
