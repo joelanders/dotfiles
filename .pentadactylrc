@@ -1,5 +1,7 @@
 set hintkeys='asdfghjklweiovbn'
 imap jk <Esc>
+cmap <C-b> <Left>
+cmap <C-f> <Right>
 
 map -builtin <C-e> 10<C-e>
 map -builtin <C-y> 10<C-y>
