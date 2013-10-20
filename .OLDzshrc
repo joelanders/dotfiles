@@ -1,0 +1,57 @@
+bindkey -v
+stty pass8 && bindkey -mv 2>/dev/null
+
+function precmd {
+    VIMODE=$'%{\e[0;32m%}[i]%{\e[0m%}'
+}
+
+function zle-keymap-select {
+    NCOLOR=$'%{\e[1;33m%}'
+    ICOLOR=$'%{\e[0;32m%}'
+    ENDCOL=$'%{\e[0m%}'
+    VIMODE="${${KEYMAP/vicmd/${NCOLOR}[n]${ENDCOL}}/(main|viins)/${ICOLOR}[i]${ENDCOL}}"
+    zle reset-prompt
+}
+
+zle -N zle-keymap-select
+
+setopt prompt_subst
+
+PROMPT=$'%{\e[0;36m%}\\
+%n@%m \\
+%{\e[0m%}\\
+%{\e[0;34m%}\\
+${PWD/#$HOME/~} \\
+%{\e[0m%}\\
+${VIMODE} \\
+%{\e[0;35m%}\\
+$ \\
+%{\e[0m%}'
+
+autoload -U select-word-style
+select-word-style bash
+
+bindkey -M viins '^w' backward-kill-word
+bindkey -M viins '^h' backward-delete-char
+bindkey -M viins '^?' backward-delete-char
+bindkey -M viins 'jk' vi-cmd-mode
+
+alias ls='ls -F --color=auto'
+alias ll='ls -ahl'
+alias pm='sudo pacmatic'
+
+eval $( dircolors -b ~/.dir_colors )
+export CLICOLOR=1
+export GREP_OPTIONS="--color"
+export RI="--format ansi -T"
+alias tmux="TERM=xterm-256color tmux"
+mcd() { mkdir -p "$@" && cd "$@"; }
+v() { vim -O "include/$@.hh" "src/$@.cc";  }
+padoff() { synclient TouchpadOff=1; }
+padon() { synclient TouchpadOff=0; }
+alias mi='make -j5 && make -j5 install'
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias emacs="emacs -nw"
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib 
