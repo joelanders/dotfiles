@@ -92,5 +92,11 @@ alias bes='bundle exec spec'
 alias ber='bundle exec rake'
 alias be='bundle exec'
 
-source "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash"
+# nasty... (and figure out why the zsh version doesn't work)
+if     [ -e "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash" ]; then
+    source  "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash"
+elif  [ -e "/usr/share/git/completion/git-completion.bash" ]; then
+    source "/usr/share/git/completion/git-completion.bash" 2>/dev/null
+fi
+
 export SATISFACTION_TOOLS=/Users/joelanders/code/tools
