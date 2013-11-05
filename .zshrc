@@ -101,3 +101,11 @@ elif  [ -e "/usr/share/git/completion/git-completion.bash" ]; then
 fi
 
 export SATISFACTION_TOOLS=/Users/joelanders/code/tools
+
+# experimental
+function find-selecta {
+    BUFFER+=" $(find . -not -path './.git*' | selecta)"
+    zle accept-line
+}
+zle -N find-selecta
+bindkey '^t' find-selecta
