@@ -34,7 +34,16 @@ bindkey -s '\ej1' 'jkk\n'
 alias ll='ls -ahl'
 #different mechanisms to do basically the same thing
 alias lsh="ls -a | egrep '^\.'"
-lsd() {for dirs in */; do echo $dirs; done}
+# list directories
+lsd() {for dir in */; do echo $dir; done}
+
+# list git directories and non-git directories
+lsgd() {for dir in */; do if [ -d $dir/.git ]; then echo $dir; fi; done}
+# list non-git directories... (ugly repetition)
+lsngd() {for dir in */; do if [ ! -d $dir/.git ]; then echo $dir; fi; done}
+# do a git fetch in each git directory
+# lots of nasty output. sometimes rvm will ask about .rvmrc...
+fetchall() {for d in `lsgd`; do (cd $d && echo "### $d ###\n" && git fetch); done}
 
 export CLICOLOR=1
 export GREP_OPTIONS="--color"
