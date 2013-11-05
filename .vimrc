@@ -44,6 +44,8 @@ map <C-j> 10j
 map <C-k> 10k
 map <Leader>j 5j
 "map <Leader>k 5k
+map <C-a> 0
+map <Leader>a $
 nnoremap <cr> :nohlsearch<cr>
 nnoremap <C-H> 20h
 nnoremap <C-L> 20l
