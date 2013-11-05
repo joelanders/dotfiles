@@ -65,6 +65,7 @@ alias gf='git fetch'
 alias gff='git merge --ff-only'
 alias gffom='git merge --ff-only origin/master'
 alias gl='git log'
+alias glo='git log --oneline'
 alias gl1='git log --graph --all --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(blue)%s%C(reset) %C(bold blue)— %an%C(reset)%C(bold yellow)%d%C(reset)" --abbrev-commit --date=relative'
 alias gl2='git log --graph --all --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n""          %C(blue)%s%C(reset) %C(bold blue)— %an%C(reset)" --abbrev-commit'
 
