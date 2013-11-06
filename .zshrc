@@ -23,9 +23,9 @@ $ \\
 autoload -U select-word-style
 select-word-style bash
 
-bindkey -s ',gs' '^qgit status\n'
-bindkey -s ',gb' '^qgit branch\n'
-bindkey -s '\ej1' 'jkk\n'
+#bindkey -s ',gs' '^qgit status\n'
+#bindkey -s ',gb' '^qgit branch\n'
+#bindkey -s '\ej1' 'jkk\n'
 #bindkey -s 'j2' 'jkkk\n'
 #bindkey -s 'ja' 'jkk0cw'
 #bindkey -s 'je' 'jkkBcW'
@@ -33,6 +33,7 @@ bindkey -s '\ej1' 'jkk\n'
 #alias ls='ls -F --color=auto'
 alias ll='ls -ahl'
 #different mechanisms to do basically the same thing
+#(this one lists hidden files; the next lists directories)
 alias lsh="ls -a | egrep '^\.'"
 # list directories
 lsd() {for dir in */; do echo $dir; done}
