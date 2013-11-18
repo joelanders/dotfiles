@@ -51,12 +51,12 @@ export GREP_OPTIONS="--color"
 export RI="--format ansi -T"
 #alias tmux="TERM=xterm-256color tmux"
 mcd() { mkdir -p "$@" && cd "$@"; }
-cdu()      { cd .. }
-cduu()     { cd ../.. }
-cduuu()    { cd ../../.. }
-cduuuu()   { cd ../../../.. }
-cduuuuu()  { cd ../../../../.. }
-cduuuuuu() { cd ../../../../../.. }
+cdu()      { cd ../$@ }
+cduu()     { cd ../../$@ }
+cduuu()    { cd ../../../$@ }
+cduuuu()   { cd ../../../../$@ }
+cduuuuu()  { cd ../../../../../$@ }
+cduuuuuu() { cd ../../../../../../$@ }
 #v() { vim -O "include/$@.hh" "src/$@.cc";  }
 #alias mi='make -j5 && make -j5 install'
 alias gs='git status'
