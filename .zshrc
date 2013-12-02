@@ -122,3 +122,5 @@ zle -N find-selecta
 bindkey '^t' find-selecta
 
 alias epoch='date +"%s"'
+
+fn() { find . -name "*$@*" }
