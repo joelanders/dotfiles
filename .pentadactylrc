@@ -6,6 +6,9 @@ cmap <C-f> <Right>
 map -builtin <C-e> 10<C-e>
 map -builtin <C-y> 10<C-y>
 
+map -builtin <C-d> 30<C-e>
+map -builtin <C-u> 30<C-y>
+
 :hi Hint font-family: Inconsolata; font-size: 13px; font-weight: bold; color: white; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 1px 0px 1px; 
 nmap gq :taba 1 0<cr>
 nmap gw :taba 2 0<cr>
