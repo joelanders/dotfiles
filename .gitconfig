@@ -1,0 +1,13 @@
+[user]
+	name = Joe Landers
+	email = joe@joelanders.net
+[color]
+	ui = auto
+[alias]
+    ci = commit
+    s = status
+    b = branch
+    co = checkout
+    d = diff
+[core]
+	excludesfile = /Users/joelanders/.gitignore_global
