@@ -103,6 +103,7 @@ alias e='emacsclient -n'
 alias bes='bundle exec spec'
 alias ber='bundle exec rake'
 alias be='bundle exec'
+alias bi='bundle install' #sex
 
 # nasty... (and figure out why the zsh version doesn't work)
 if     [ -e "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash" ]; then
