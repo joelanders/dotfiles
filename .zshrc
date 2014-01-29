@@ -125,3 +125,4 @@ bindkey '^t' find-selecta
 alias epoch='date +"%s"'
 
 fn() { find . -name "*$@*" }
+alias knife="bundle exec knife"
