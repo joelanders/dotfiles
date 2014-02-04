@@ -126,3 +126,9 @@ alias epoch='date +"%s"'
 
 fn() { find . -name "*$@*" }
 alias knife="bundle exec knife"
+
+alias jq='fg %1'
+alias jw='fg %2'
+alias je='fg %3'
+alias jr='fg %4'
+alias jt='fg %5'
