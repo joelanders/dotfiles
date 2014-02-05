@@ -124,7 +124,7 @@ bindkey '^t' find-selecta
 
 alias epoch='date +"%s"'
 
-fn() { find . -name "*$@*" }
+fn() { find $([ $2 ] && echo $2 || echo .) -name "*$1*" }
 alias knife="bundle exec knife"
 
 alias jq='fg %1'
