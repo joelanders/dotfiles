@@ -132,3 +132,6 @@ alias jw='fg %2'
 alias je='fg %3'
 alias jr='fg %4'
 alias jt='fg %5'
+
+export EDITOR=vim
+export GSFN_IRONFAN_ENV=dev
