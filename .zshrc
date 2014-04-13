@@ -10,7 +10,7 @@ zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 precmd () { vcs_info }
 
 PROMPT=$'%{\e[0;36m%}\\
-l@rmbp \\
+l@tp \\
 %{\e[0m%}\\
 %{\e[0;34m%}\\
 ${PWD/#$HOME/~} \\
