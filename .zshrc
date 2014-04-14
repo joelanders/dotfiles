@@ -135,3 +135,5 @@ alias jt='fg %5'
 
 export EDITOR=vim
 export GSFN_IRONFAN_ENV=dev
+
+alias pm='sudo pacmatic'
