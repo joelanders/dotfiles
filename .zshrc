@@ -83,16 +83,14 @@ alias gl2='git log --graph --all --format=format:"%C(bold blue)%h%C(reset) - %C(
 alias ick='ack -i'
 alias wack='ack -w'
 alias wick='ack -iw'
+alias pack='ack --pager="less -r"'
 
 PATH=$PATH:$HOME/.rvm/bin:/usr/local/sbin:/Users/joelanders/code/tools/bin # Add RVM to PATH for scripting
-
-alias sc='script/satisfaction'
 
 HISTSIZE=400
 HISTFILE=~/.zsh_history
 SAVEHIST=400
-alias ss='cd ~/code/satisfaction'
-alias pack='ack --pager="less -r"'
+
 alias t='tree'
 alias v='vim'
 alias p='ps aux | grep '
@@ -103,7 +101,7 @@ alias e='emacsclient -n'
 alias bes='bundle exec spec'
 alias ber='bundle exec rake'
 alias be='bundle exec'
-alias bi='bundle install' #sex
+alias bi='bundle install'
 
 # nasty... (and figure out why the zsh version doesn't work)
 if     [ -e "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash" ]; then
@@ -111,8 +109,6 @@ if     [ -e "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash" ]; th
 elif  [ -e "/usr/share/git/completion/git-completion.bash" ]; then
     source "/usr/share/git/completion/git-completion.bash" 2>/dev/null
 fi
-
-export SATISFACTION_TOOLS=/Users/joelanders/code/tools
 
 # experimental
 function find-selecta {
@@ -134,6 +130,5 @@ alias jr='fg %4'
 alias jt='fg %5'
 
 export EDITOR=vim
-export GSFN_IRONFAN_ENV=dev
 
 alias pm='sudo pacmatic'
