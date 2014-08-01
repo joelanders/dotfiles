@@ -32,6 +32,8 @@ select-word-style bash
 
 #alias ls='ls -F --color=auto'
 alias ll='ls -ahl'
+alias lz='ll -S'
+lsdz() {find . -maxdepth 1 -type d -exec du -sh '{}' \;}
 #different mechanisms to do basically the same thing
 #(this one lists hidden files; the next lists directories)
 alias lsh="ls -a | egrep '^\.'"
